@@ -3,7 +3,7 @@
     <img class="logo" src="./assets/logo.png">
     <hello></hello>
     <p>
-      Welcome to your Vue.js app!
+      Welcome to your CAST!
     </p>
     <p>
       To get a better understanding of how this boilerplate works, check out
@@ -23,13 +23,13 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Hello from './components/Hello';
 
 export default {
   components: {
-    Hello
-  }
-}
+    Hello,
+  },
+};
 </script>
 
 <style>
