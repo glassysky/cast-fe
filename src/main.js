@@ -1,11 +1,12 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import VueResource from 'vue-resource';
+import { sync } from 'vuex-router-sync';
 import App from './App';
+import router from './router';
+import store from './vuex/store';
 
-Vue.use(Vuex);
+Vue.use(VueResource);
 
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App },
-});
+sync(store, router);
+
+router.start(App, '#root');
