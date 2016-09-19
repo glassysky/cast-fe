@@ -1,3 +1,7 @@
+<style lang="less">
+@import "./styles/base/normalize.css";
+</style>
+
 <template>
   <div id="app">
     <router-view></router-view>
@@ -10,6 +14,3 @@ export default {
   store,
 };
 </script>
-
-<style>
-</style>
