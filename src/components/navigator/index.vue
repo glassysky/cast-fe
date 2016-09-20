@@ -4,11 +4,15 @@
 
 <template>
   <div class="navigator">
-    <ul>
-      <li><a href="">CAST</a></li>
-      <li><a href="">首页</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+    <ul class="left_menu">
+      <li><a href="javascript:void(0)">CAST</a></li>
+      <li class="nav_item"><a href="">首页</a></li>
+      <li class="nav_item"><a href="">活动</a></li>
+      <li class="nav_item"><a href="">报名</a></li>
+    </ul>
+    <ul class="right_menu">
+      <li class="nav_item"><a v-link="{ path: '/sign-in' }">登陆</a></li>
+      <li class="nav_item"><a v-link="{ path: '/sign-up' }">注册</a></li>
     </ul>
   </div>
 </template>

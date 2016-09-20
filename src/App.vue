@@ -1,5 +1,5 @@
 <style lang="less">
-@import "./styles/base/normalize.css";
+@import "./styles/base/reset.less";
 </style>
 
 <template>
