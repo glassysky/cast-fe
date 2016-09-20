@@ -3,8 +3,13 @@
 </style>
 
 <template>
-  <div class="nav_container">
-    
+  <div class="navigator">
+    <ul>
+      <li><a href="">CAST</a></li>
+      <li><a href="">首页</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
   </div>
 </template>
 
@@ -18,6 +23,6 @@ export default {
   ready() {},
   attached() {},
   methods: {},
-  components: {}
+  components: {},
 };
 </script>
