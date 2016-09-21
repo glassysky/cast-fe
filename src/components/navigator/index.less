@@ -1,14 +1,21 @@
+@import "../../styles/base/variable.less";
+
 .navigator {
+  position: absolute;
+  box-sizing: border-box;
   width: 100%;
+  height: @navHeight;
   background-color: black;
-  overflow: hidden;
+  border-bottom: 1px solid #555;
   ul {
     padding: 0 20px;
     li {
       float: left;
       a {
         display: inline-block;
-        padding: 20px 15px;
+        height: @navHeight;
+        line-height: @navHeight;
+        padding: 0 15px;
         color: #fff;
       }
     }

@@ -1,0 +1,30 @@
+@import "../../styles/base/variable.less";
+
+.signin_background {
+  position: absolute;
+  top: @navHeight;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0d0d0d;
+  .signin_container {
+    margin: 0 auto;
+    width: 300px;
+    .header {
+      overflow: hidden;
+    }
+    .body {
+      border: 1px solid #555;
+      border-radius: 5px;
+      .form {
+        padding: 0 10px;
+        .form_control {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
