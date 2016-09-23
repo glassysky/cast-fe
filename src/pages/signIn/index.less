@@ -13,16 +13,35 @@
     .header {
       overflow: hidden;
     }
-    .body {
+    .form_wrap {
       border: 1px solid #555;
       border-radius: 5px;
+      .form_header {
+        padding: 10px;
+        color: #fff;
+      }
       .form {
-        padding: 0 10px;
+        padding: 10px;
         .form_control {
           display: flex;
           flex-direction: column;
           margin-bottom: 20px;
           padding: 0 10px;
+          label {
+            margin-bottom: 5px;
+            color: #fff;
+          }
+          input {
+            height: 25px;
+            border-radius: 3px;
+          }
+        }
+        button {
+          background-color: #333;
+          color: #fff;
+          border: 2px solid #e00;
+          border-radius: 3px;
+          padding: 5px;
         }
       }
     }
