@@ -2,7 +2,9 @@
 </style>
 
 <template lang="html">
-  <h1>sign up</h1>
+  <div class="">
+
+  </div>
 </template>
 
 <script>
