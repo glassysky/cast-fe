@@ -1,12 +1,8 @@
 @import "../../styles/base/variable.less";
+@import "../../styles/base/mixin.less";
 
 .signin_background {
-  position: absolute;
-  top: @navHeight;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-width: @minWidth;
+  .common_container();
   .signin_container {
     margin: 0 auto;
     width: 300px;
