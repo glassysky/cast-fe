@@ -16,8 +16,15 @@
         display: inline-block;
         height: @navHeight;
         line-height: @navHeight;
-        padding: 0 15px;
+        padding: 0 20px;
         color: #fff;
+        font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      }
+      .band_name {
+        letter-spacing: 0.1em;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: default;
       }
     }
     .nav_item {
@@ -25,7 +32,10 @@
         transition: 0.3s;
       }
       a:hover {
-        background-color: @red;
+        color: @red;
+      }
+      .sign_link {
+        
       }
     }
   }
