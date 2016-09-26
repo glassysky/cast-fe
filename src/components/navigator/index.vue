@@ -36,6 +36,15 @@
           注册
         </a>
       </li>
+      <li class="nav_item">
+        <div class="menu_wrap">
+          <div class="user_name">glassysky</div>
+          <ul class="personal_menu">
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">注销</a></li>
+          </ul>
+        </div>
+      </li>
     </ul>
   </div>
 </template>

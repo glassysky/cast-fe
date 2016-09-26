@@ -6,7 +6,7 @@
   width: 100%;
   min-width: @minWidth;
   height: @navHeight;
-  background-color: black;
+  background-color: @black;
   border-bottom: 1px solid #555;
   ul {
     padding: 0 20px;
@@ -17,7 +17,7 @@
         height: @navHeight;
         line-height: @navHeight;
         padding: 0 20px;
-        color: #fff;
+        color: @white;
         font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
       }
       .band_name {
@@ -38,7 +38,33 @@
         padding: 0;
       }
       .dot {
-        color: #fff;
+        color: @white;
+      }
+      .menu_wrap {
+        position: relative;
+        color: @white;
+        .user_name {
+          height: @navHeight;
+          line-height: @navHeight;
+          padding: 0 20px;
+        }
+        .user_name:hover {
+          cursor: pointer;
+        }
+        .personal_menu {
+          position: absolute;
+          top: @navHeight;
+          background-color: @black;
+          padding: 0;
+          overflow: hidden;
+          li {
+            width: 100%;
+            a {
+              height: @personalMenuHeight;
+              line-height: @personalMenuHeight;
+            }
+          }
+        }
       }
     }
   }
