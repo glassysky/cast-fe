@@ -28,8 +28,7 @@
         >
           登陆
         </a>
-      </li>
-      <li class="nav_item">
+        <span class="dot">·</span>
         <a
           v-link="{ path: '/sign-up' }"
           class="sign_link"
