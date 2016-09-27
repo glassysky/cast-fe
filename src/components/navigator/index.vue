@@ -47,9 +47,12 @@
             class="personal_menu"
             v-if="show"
             transition="expand"
+            @mouseover="showMenu"
+            @mouseout="hideMenu"
           >
             <li><a href="#">个人中心</a></li>
             <li><a href="#">注销</a></li>
+            <div class="clear"></div>
           </ul>
         </div>
       </li>
@@ -72,7 +75,9 @@ export default {
       this.show = true;
     },
     hideMenu() {
-      this.show = false;
+      // setTimeout(() => {
+      //   this.show = false;
+      // }, 1000);
     },
   },
   components: {},
