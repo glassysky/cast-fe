@@ -75,3 +75,14 @@
     float: right;
   }
 }
+
+/* always present */
+.expand-transition {
+  transition: all .4s ease;
+}
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.expand-enter, .expand-leave {
+  height: 0;
+  opacity: 0;
+}

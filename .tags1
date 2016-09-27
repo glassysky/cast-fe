@@ -4,21 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.navigator	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^.navigator {$/;"	function	line:3
-ul	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^  ul {$/;"	function	line:11
-li	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^    li {$/;"	function	line:13
-a	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      a {$/;"	function	line:15
-.band_name	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      .band_name {$/;"	function	line:23
-.nav_item	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^    .nav_item {$/;"	function	line:30
-a	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      a {$/;"	function	line:31
-a:hover	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      a:hover {$/;"	function	line:34
-.sign_link	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      .sign_link {$/;"	function	line:37
-.dot	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      .dot {$/;"	function	line:40
-.menu_wrap	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      .menu_wrap {$/;"	function	line:43
-.user_name	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^        .user_name {$/;"	function	line:46
-.user_name:hover	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^        .user_name:hover {$/;"	function	line:51
-.personal_menu	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^        .personal_menu {$/;"	function	line:54
-li	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^          li {$/;"	function	line:60
-a	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^            a {$/;"	function	line:62
-.left_menu	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^  .left_menu {$/;"	function	line:71
-.right_menu	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^  .right_menu {$/;"	function	line:74

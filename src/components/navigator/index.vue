@@ -38,8 +38,16 @@
       </li>
       <li class="nav_item">
         <div class="menu_wrap">
-          <div class="user_name">glassysky</div>
-          <ul class="personal_menu">
+          <div
+            class="user_name"
+            @mouseover="showMenu"
+            @mouseout="hideMenu"
+          >glassysky</div>
+          <ul
+            class="personal_menu"
+            v-if="show"
+            transition="expand"
+          >
             <li><a href="#">个人中心</a></li>
             <li><a href="#">注销</a></li>
           </ul>
@@ -53,12 +61,20 @@
 export default {
   data() {
     return {
+      show: false,
     };
   },
   computed: {},
   ready() {},
   attached() {},
-  methods: {},
+  methods: {
+    showMenu() {
+      this.show = true;
+    },
+    hideMenu() {
+      this.show = false;
+    },
+  },
   components: {},
 };
 </script>

@@ -23,3 +23,5 @@ li	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^      
 a	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^            a {$/;"	function	line:62
 .left_menu	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^  .left_menu {$/;"	function	line:71
 .right_menu	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^  .right_menu {$/;"	function	line:74
+.expand-transition	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^.expand-transition {$/;"	function	line:80
+.expand-enter, .expand-leave	/Users/cuitianhao/Github/cast-fe/src/components/navigator/index.less	/^.expand-enter, .expand-leave {$/;"	function	line:85
