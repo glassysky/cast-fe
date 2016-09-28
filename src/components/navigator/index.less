@@ -73,6 +73,7 @@
       .menu_wrap:hover {
         .personal_menu {
           display: block;
+          // height: auto;
         }
       }
     }
@@ -87,15 +88,11 @@
 
 /* always present */
 .expand-transition {
-  transition: all .4s ease;
+  transition: all 1s ease;
 }
 /* .expand-enter defines the starting state for entering */
 /* .expand-leave defines the ending state for leaving */
 .expand-enter, .expand-leave {
   height: 0;
   opacity: 0;
-}
-
-.clear {
-  clear: both;
 }

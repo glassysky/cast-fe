@@ -34,9 +34,9 @@
       </li>
       <li class="nav_item">
         <div class="menu_wrap">
-          <div
+          <a
             class="user_name"
-          >glassysky</div>
+          >glassysky</a>
           <ul
             class="personal_menu"
             transition="expand"
