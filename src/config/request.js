@@ -1,5 +1,5 @@
-const PREFIX = 'localhost:3000';
+const PREFIX = '//localhost:3000';
 
-export default {
+export {
   PREFIX,
 };

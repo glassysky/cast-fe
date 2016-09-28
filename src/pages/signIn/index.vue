@@ -29,6 +29,7 @@
                 :class="{ 'button_hover': buttonHover }"
                 @mouseOver="buttonMouseOver"
                 @mouseOut="buttonMouseOut"
+                @click="signIn"
               >
                 登陆
               </button>
@@ -42,6 +43,7 @@
 </template>
 
 <script>
+import Request from '../../utils/request';
 export default {
   data() {
     return {
@@ -57,6 +59,18 @@ export default {
     },
     buttonMouseOut() {
       this.buttonHover = false;
+    },
+    signIn() {
+      Request.get({
+        url: '/user/get',
+        data: {
+          id: 33,
+        },
+      }).then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.error(err);
+      });
     },
   },
   components: {},
