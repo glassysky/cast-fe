@@ -25,31 +25,24 @@
         <a
           v-link="{ path: '/sign-in' }"
           class="sign_link"
-        >
-          登陆
-        </a>
+        >登陆</a>
         <span class="dot">·</span>
         <a
           v-link="{ path: '/sign-up' }"
           class="sign_link"
-        >
-          注册
-        </a>
+        >注册</a>
       </li>
       <li class="nav_item">
         <div class="menu_wrap">
           <div
             class="user_name"
-            @click="toggleMenu"
           >glassysky</div>
           <ul
             class="personal_menu"
-            v-if="isDropdownShow"
             transition="expand"
           >
             <li><a href="#">个人中心</a></li>
             <li><a href="#">注销</a></li>
-            <div class="clear"></div>
           </ul>
         </div>
       </li>
@@ -58,38 +51,19 @@
 </template>
 
 <script>
-import {
-  showDropMenu,
-  hideDropMenu,
-} from '../../vuex/common/action';
-
 export default {
   data() {
     return {
-      show: false,
     };
   },
   computed: {},
   ready() {},
   attached() {},
-  methods: {
-    toggleMenu() {
-      if (this.isDropdownShow) {
-        this.hideDropMenu();
-      } else {
-        this.showDropMenu();
-      }
-    },
-  },
+  methods: {},
   components: {},
   vuex: {
-    getters: {
-      isDropdownShow: ({ common }) => common.isNavDropdownShow,
-    },
-    actions: {
-      showDropMenu,
-      hideDropMenu,
-    },
+    getters: {},
+    actions: {},
   },
 };
 </script>

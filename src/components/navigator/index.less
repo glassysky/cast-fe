@@ -39,10 +39,28 @@
       }
       .dot {
         color: @white;
+        cursor: pointer;
+        font-weight: 700;
       }
       .menu_wrap {
         position: relative;
         color: @white;
+        .personal_menu {
+          display: none;
+          position: absolute;
+          top: @navHeight;
+          background-color: @black;
+          padding: 0;
+          overflow: hidden;
+          z-index: 100;
+          li {
+            width: 100%;
+            a {
+              height: @personalMenuHeight;
+              line-height: @personalMenuHeight;
+            }
+          }
+        }
         .user_name {
           height: @navHeight;
           line-height: @navHeight;
@@ -51,20 +69,10 @@
         .user_name:hover {
           cursor: pointer;
         }
+      }
+      .menu_wrap:hover {
         .personal_menu {
-          position: absolute;
-          top: @navHeight;
-          background-color: @black;
-          padding: 0;
-          overflow: hidden;
-          pointer-events: all;
-          li {
-            width: 100%;
-            a {
-              height: @personalMenuHeight;
-              line-height: @personalMenuHeight;
-            }
-          }
+          display: block;
         }
       }
     }
