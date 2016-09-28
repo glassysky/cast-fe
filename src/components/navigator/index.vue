@@ -40,15 +40,12 @@
         <div class="menu_wrap">
           <div
             class="user_name"
-            @mouseover="showMenu"
-            @mouseout="hideMenu"
+            @click="toggleMenu"
           >glassysky</div>
           <ul
             class="personal_menu"
-            v-if="show"
+            v-if="isDropdownShow"
             transition="expand"
-            @mouseover="showMenu"
-            @mouseout="hideMenu"
           >
             <li><a href="#">个人中心</a></li>
             <li><a href="#">注销</a></li>
@@ -61,6 +58,11 @@
 </template>
 
 <script>
+import {
+  showDropMenu,
+  hideDropMenu,
+} from '../../vuex/common/action';
+
 export default {
   data() {
     return {
@@ -71,15 +73,23 @@ export default {
   ready() {},
   attached() {},
   methods: {
-    showMenu() {
-      this.show = true;
-    },
-    hideMenu() {
-      // setTimeout(() => {
-      //   this.show = false;
-      // }, 1000);
+    toggleMenu() {
+      if (this.isDropdownShow) {
+        this.hideDropMenu();
+      } else {
+        this.showDropMenu();
+      }
     },
   },
   components: {},
+  vuex: {
+    getters: {
+      isDropdownShow: ({ common }) => common.isNavDropdownShow,
+    },
+    actions: {
+      showDropMenu,
+      hideDropMenu,
+    },
+  },
 };
 </script>
