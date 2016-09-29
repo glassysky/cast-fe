@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import { PREFIX } from '../config/request';
 
-console.log(PREFIX);
 export default {
   init(params) {
     if (!params.url) {

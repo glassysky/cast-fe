@@ -61,10 +61,11 @@ export default {
       this.buttonHover = false;
     },
     signIn() {
-      Request.get({
-        url: '/user/get',
+      Request.post({
+        url: '/user/sign-in',
         data: {
-          id: 33,
+          password: '4567666',
+          stu_id: 'B14011030',
         },
       }).then((res) => {
         console.log(res);
