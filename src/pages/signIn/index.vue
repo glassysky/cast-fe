@@ -15,11 +15,11 @@
           <div class="form">
             <div class="form_control">
               <label for="">学号</label>
-              <input type="text">
+              <input type="text" v-model="stu_id">
             </div>
             <div class="form_control">
               <label for="">密码</label>
-              <input type="password">
+              <input type="password" v-model="password">
             </div>
             <div class="form_control">
               <button
@@ -48,6 +48,8 @@ export default {
   data() {
     return {
       buttonHover: false,
+      password: '',
+      stu_id: '',
     };
   },
   computed: {},
@@ -61,11 +63,12 @@ export default {
       this.buttonHover = false;
     },
     signIn() {
+      console.log(this.password);
       Request.post({
         url: '/user/sign-in',
         data: {
-          password: '4567666',
-          stu_id: 'B14011030',
+          password: this.password,
+          stu_id: this.stu_id,
         },
       }).then((res) => {
         console.log(res);
