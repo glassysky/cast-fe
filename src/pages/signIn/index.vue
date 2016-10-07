@@ -15,7 +15,7 @@
           <div class="form">
             <div class="form_control">
               <label for="">学号</label>
-              <input type="text" v-model="stu_id">
+              <input type="text" v-model="stuId">
             </div>
             <div class="form_control">
               <label for="">密码</label>
@@ -49,7 +49,7 @@ export default {
     return {
       buttonHover: false,
       password: '',
-      stu_id: '',
+      stuId: '',
     };
   },
   computed: {},
@@ -63,12 +63,11 @@ export default {
       this.buttonHover = false;
     },
     signIn() {
-      console.log(this.password);
       Request.post({
         url: '/user/sign-in',
         data: {
           password: this.password,
-          stu_id: this.stu_id,
+          stu_id: this.stuId,
         },
       }).then((res) => {
         console.log(res);
