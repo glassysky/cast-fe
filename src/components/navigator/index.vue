@@ -21,7 +21,7 @@
       <li class="nav_item">
         <a v-link="{ path: '/activity' }">活动</a>
       </li>
-      <li class="nav_item">
+      <li class="nav_item" v-if="!userName">
         <a
           v-link="{ path: '/sign-in' }"
           class="sign_link"
@@ -32,7 +32,7 @@
           class="sign_link"
         >注册</a>
       </li>
-      <li class="nav_item">
+      <li class="nav_item" v-if="userName">
         <div class="menu_wrap">
           <a
             class="user_name"
@@ -62,7 +62,9 @@ export default {
   methods: {},
   components: {},
   vuex: {
-    getters: {},
+    getters: {
+      userName: state => state.common.userName,
+    },
     actions: {},
   },
 };

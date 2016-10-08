@@ -45,6 +45,8 @@
 <script>
 import Request from '../../utils/request';
 import LS from '../../utils/localStorage';
+import { setUserName } from '../../vuex/common/action';
+
 export default {
   data() {
     return {
@@ -71,7 +73,6 @@ export default {
           stu_id: this.stuId,
         },
       }).then((res) => {
-        console.log(res);
         if (res.code === 1) {
           const data = res.result.data;
           const userInfo = {
@@ -80,17 +81,22 @@ export default {
           };
           LS.set('cast_user', JSON.stringify(userInfo));
           LS.set('cast_jwt', res.result.token);
+          this.setUserName(data.user_name);
           this.$router.go({
             path: '/',
           });
         } else {
-          alert(res.result);
+          console.log(res.result);
         }
-      }).catch((err) => {
-        console.error(err);
+      }).catch(() => {
       });
     },
   },
   components: {},
+  vuex: {
+    actions: {
+      setUserName,
+    },
+  },
 };
 </script>

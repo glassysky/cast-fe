@@ -104,10 +104,8 @@ export default {
           qq: this.qq,
           password: this.password,
         },
-      }).then((res) => {
-        console.log(res);
-      }).catch((err) => {
-        console.error(err);
+      }).then(() => {
+      }).catch(() => {
       });
     },
   },
