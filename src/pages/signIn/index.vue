@@ -44,6 +44,7 @@
 
 <script>
 import Request from '../../utils/request';
+import LS from '../../utils/localStorage';
 export default {
   data() {
     return {
@@ -71,6 +72,20 @@ export default {
         },
       }).then((res) => {
         console.log(res);
+        if (res.code === 1) {
+          const data = res.result.data;
+          const userInfo = {
+            id: data.id,
+            user_name: data.user_name,
+          };
+          LS.set('cast_user', JSON.stringify(userInfo));
+          LS.set('cast_jwt', res.result.token);
+          this.$router.go({
+            path: '/',
+          });
+        } else {
+          alert(res.result);
+        }
       }).catch((err) => {
         console.error(err);
       });

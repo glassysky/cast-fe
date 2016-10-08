@@ -3,4 +3,7 @@ module.exports = {
   set: (name, value) => {
     localStorage.setItem(name, value);
   },
+  remove: (name) => {
+    localStorage.removeItem(name);
+  },
 };
