@@ -12,10 +12,30 @@
 <script>
 import store from './vuex/store';
 import navigator from './components/navigator/index';
+import LS from './utils/localStorage';
+import { setUserName } from './vuex/common/action';
 export default {
   store,
   components: {
     navigator,
+  },
+  ready() {
+    this.getLocalStorage();
+  },
+  methods: {
+    getLocalStorage() {
+      let userInfo = null;
+      userInfo = JSON.parse(LS.get('cast_user'));
+
+      if (userInfo) {
+        this.setUserName(userInfo.user_name);
+      }
+    },
+  },
+  vuex: {
+    actions: {
+      setUserName,
+    },
   },
 };
 </script>

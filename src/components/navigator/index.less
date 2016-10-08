@@ -46,18 +46,24 @@
         position: relative;
         color: @white;
         .personal_menu {
-          display: none;
+          // display: none;
           position: absolute;
           top: @navHeight;
+          right: 0;
           background-color: @black;
           padding: 0;
           overflow: hidden;
           z-index: 100;
           li {
             width: 100%;
+            min-width: 110px;
             a {
+              display: inline-block;
+              box-sizing: border-box;
+              width: 100%;
               height: @personalMenuHeight;
               line-height: @personalMenuHeight;
+              text-align: right;
             }
           }
         }

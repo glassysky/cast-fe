@@ -36,7 +36,7 @@
         <div class="menu_wrap">
           <a
             class="user_name"
-          >glassysky</a>
+          >{{ userName }}</a>
           <ul
             class="personal_menu"
           >
@@ -56,9 +56,13 @@ export default {
     };
   },
   computed: {},
-  ready() {},
+  ready() {
+
+  },
   attached() {},
-  methods: {},
+  methods: {
+
+  },
   components: {},
   vuex: {
     getters: {
