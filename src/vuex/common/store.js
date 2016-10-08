@@ -15,6 +15,9 @@ const mutations = {
   [T.SET_USER_NAME](state, data) {
     state.userName = data;
   },
+  [T.CLEAR_USER_NAME](state) {
+    state.userName = '';
+  },
 };
 
 export default {

@@ -12,11 +12,15 @@ const setUserName = ({ dispatch }, data) => {
   dispatch(T.SET_USER_NAME, data);
 };
 
+const clearUserName = ({ dispatch }) => {
+  dispatch(T.CLEAR_USER_NAME);
+};
 // const getUserName = ({ state }) => state.common.userName;
 
 export {
   showDropMenu,
   hideDropMenu,
   setUserName,
+  clearUserName,
   // getUserName,
 };

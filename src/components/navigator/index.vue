@@ -21,7 +21,10 @@
       <li class="nav_item">
         <a v-link="{ path: '/activity' }">活动</a>
       </li>
-      <li class="nav_item log_menu" v-if="!userName">
+      <li
+        class="nav_item log_menu"
+        v-if="!userName"
+      >
         <a
           v-link="{ path: '/sign-in' }"
           class="sign_link"
@@ -32,7 +35,10 @@
           class="sign_link"
         >注册</a>
       </li>
-      <li class="nav_item" v-if="userName">
+      <li
+        class="nav_item menu_item"
+        v-else
+      >
         <div class="menu_wrap">
           <a
             class="user_name"
@@ -41,7 +47,7 @@
             class="personal_menu"
           >
             <li><a href="#">个人中心</a></li>
-            <li><a href="#">注销</a></li>
+            <li><a href="#" @click="logOut">注销</a></li>
           </ul>
         </div>
       </li>
@@ -50,25 +56,30 @@
 </template>
 
 <script>
+import LS from '../../utils/localStorage';
+import { clearUserName } from '../../vuex/common/action';
 export default {
   data() {
     return {
     };
   },
   computed: {},
-  ready() {
-
-  },
+  ready() {},
   attached() {},
   methods: {
-
+    logOut() {
+      LS.remove('cast_user');
+      this.clearUserName();
+    },
   },
   components: {},
   vuex: {
     getters: {
       userName: state => state.common.userName,
     },
-    actions: {},
+    actions: {
+      clearUserName,
+    },
   },
 };
 </script>

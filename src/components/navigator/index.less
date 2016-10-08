@@ -46,7 +46,7 @@
         position: relative;
         color: @white;
         .personal_menu {
-          // display: none;
+          display: none;
           position: absolute;
           top: @navHeight;
           right: 0;
@@ -76,10 +76,8 @@
           cursor: pointer;
         }
       }
-      .menu_wrap:hover {
-        .personal_menu {
+      .menu_wrap:hover > .personal_menu {
           display: block;
-        }
       }
     }
     .log_menu {
@@ -94,13 +92,10 @@
   }
 }
 
-/* always present */
-.expand-transition {
-  transition: all 1s ease;
+.menu-show {
+  display: block;
 }
-/* .expand-enter defines the starting state for entering */
-/* .expand-leave defines the ending state for leaving */
-.expand-enter, .expand-leave {
-  height: 0;
-  opacity: 0;
+
+.menu-hidden {
+  display: none;
 }
