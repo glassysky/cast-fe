@@ -85,8 +85,6 @@ export default {
           this.$router.go({
             path: '/',
           });
-        } else {
-          console.log(res.result);
         }
       }).catch(() => {
       });

@@ -21,7 +21,7 @@
       <li class="nav_item">
         <a v-link="{ path: '/activity' }">活动</a>
       </li>
-      <li class="nav_item" v-if="!userName">
+      <li class="nav_item log_menu" v-if="!userName">
         <a
           v-link="{ path: '/sign-in' }"
           class="sign_link"
@@ -39,7 +39,6 @@
           >glassysky</a>
           <ul
             class="personal_menu"
-            transition="expand"
           >
             <li><a href="#">个人中心</a></li>
             <li><a href="#">注销</a></li>
