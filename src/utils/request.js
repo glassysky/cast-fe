@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import { PREFIX } from '../config/request';
+import { PREFIX, TOKEN } from '../config/request';
 
 export default {
   init(params) {
     if (!params.url) {
       throw new Error('The lack of url of request');
     }
-    // Vue.http.headers.common['x-access-token'] = TOKEN;
+    Vue.http.headers.common['x-access-token'] = TOKEN;
     Vue.http.options.emulateJSON = true;
   },
 
