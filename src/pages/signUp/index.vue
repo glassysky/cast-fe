@@ -68,6 +68,8 @@
 
 <script>
 import Request from '../../utils/request';
+import LS from '../../utils/localStorage';
+import { setUserName } from '../../vuex/common/action';
 export default {
   data() {
     return {
@@ -104,11 +106,29 @@ export default {
           qq: this.qq,
           password: this.password,
         },
-      }).then(() => {
+      }).then((res) => {
+        if (res.code === 1) {
+          const data = res.result.data;
+          const userInfo = {
+            id: data.id,
+            user_name: data.user_name,
+          };
+          LS.set('cast_user', JSON.stringify(userInfo));
+          LS.set('cast_jwt', res.result.token);
+          this.setUserName(data.user_name);
+          this.$router.go({
+            path: '/',
+          });
+        }
       }).catch(() => {
       });
     },
   },
   components: {},
+  vuex: {
+    actions: {
+      setUserName,
+    },
+  },
 };
 </script>
