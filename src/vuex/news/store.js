@@ -9,7 +9,7 @@ const mutations = {
   [T.SET_NEWS_LIST](state, data) {
     state.newsList = data;
   },
-  [T.SET_NEWS_COUNT](state, data) {
+  [T.SET_NEWS_TOTAL](state, data) {
     state.newsTotal = data;
   },
 };

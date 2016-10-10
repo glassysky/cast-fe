@@ -12,7 +12,9 @@
         <div class="list_body">
           <ul>
             <li v-for="news in newsList">
-              {{ news.news_title }}
+              <a href="#">
+                {{ news.news_title }}
+              </a>
             </li>
           </ul>
         </div>
