@@ -24,20 +24,29 @@
         <div class="list_divide">
           <ul>
             <li>
-              <a href="#" class="page_btn left_btn">
+              <a
+                href="javascript:void(0)"
+                class="page_btn left_btn"
+                @click="switchPage('-')"
+              >
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
               </a>
             </li>
             <li v-for="n in pages">
               <a
-                href="#"
+                href="javascript:void(0)"
                 class="page_btn"
+                @click="getNewsList(n + 1)"
               >
                 {{ n + 1 }}
               </a>
             </li>
             <li>
-              <a href="#" class="page_btn right_btn">
+              <a
+                href="javascript:void(0)"
+                class="page_btn right_btn"
+                @click="switchPage('+')"
+              >
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             </li>
@@ -53,6 +62,7 @@ import Request from '../../utils/request';
 import {
   setNewsList,
   setNewsTotal,
+  setNewsCurrentPage,
 } from '../../vuex/news/action';
 export default {
   data() {
@@ -78,6 +88,7 @@ export default {
         if (res.code === 1) {
           this.setNewsList(res.result.list);
           this.setNewsTotal(res.result.count);
+          this.setNewsCurrentPage(res.result.currentPage);
           this.calculatePage(res.result.count);
         }
       }).catch(() => {});
@@ -85,16 +96,29 @@ export default {
     calculatePage(num) {
       this.pages = Math.ceil(num / 10);
     },
+    switchPage(symbol) {
+      if (symbol === '+') {
+        if (this.newsCurrentPage < this.pages) {
+          this.getNewsList(parseInt(this.newsCurrentPage, 10) + 1);
+        }
+      } else {
+        if (this.newsCurrentPage !== '1') {
+          this.getNewsList(this.newsCurrentPage - 1);
+        }
+      }
+    },
   },
   components: {},
   vuex: {
     actions: {
       setNewsList,
       setNewsTotal,
+      setNewsCurrentPage,
     },
     getters: {
       newsList: state => state.news.newsList,
       newsTotal: state => state.news.newsTotal,
+      newsCurrentPage: state => state.news.newsCurrentPage,
     },
   },
 };
