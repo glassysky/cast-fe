@@ -27,6 +27,7 @@
               <a
                 href="javascript:void(0)"
                 class="page_btn left_btn"
+                :class="{ 'not_allowed': newsCurrentPage === '1'}"
                 @click="switchPage('-')"
               >
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -36,6 +37,7 @@
               <a
                 href="javascript:void(0)"
                 class="page_btn"
+                :class="{ 'current_page': parseInt(newsCurrentPage, 10) === n + 1 }"
                 @click="getNewsList(n + 1)"
               >
                 {{ n + 1 }}
@@ -46,6 +48,7 @@
                 href="javascript:void(0)"
                 class="page_btn right_btn"
                 @click="switchPage('+')"
+                :class="{ 'not_allowed': newsCurrentPage >= pages}"
               >
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
