@@ -24,7 +24,9 @@
         <div class="list_divide">
           <ul>
             <li>
-              <a href="#" class="page_btn"> < </a>
+              <a href="#" class="page_btn left_btn">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+              </a>
             </li>
             <li v-for="n in pages">
               <a
@@ -35,7 +37,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="page_btn"> > </a>
+              <a href="#" class="page_btn right_btn">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
             </li>
           </ul>
         </div>

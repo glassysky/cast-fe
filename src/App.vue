@@ -1,5 +1,6 @@
 <style lang="less">
 @import "./styles/base/reset.less";
+@import "../node_modules/font-awesome/less/font-awesome.less";
 </style>
 
 <template>
