@@ -2,6 +2,9 @@
 @import "../../styles/base/mixin.less";
 @import "../../styles/base/variable.less";
 
+@btn_side: 35px;
+@btn_radius: 2px;
+
 .news_container {
   .common_container();
   .news_article_container {
@@ -20,14 +23,51 @@
       .list_body {
         ul {
           li {
-            border-bottom: 1px solid #333;
-            padding: 10px 15px;
+            position: relative;
+            border-bottom: 1px solid #444;
+            padding: 12px 15px;
             a {
               color: white;
+              font-weight: 100;
             }
             a:hover {
               color: @red;
               text-decoration: underline;
+            }
+            .time_pattern {
+              position: absolute;
+              right: 10px;
+              color: #777;
+              font-weight: 100;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .list_divide {
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 20px;
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            .page_btn {
+              display: inline-block;
+              width: @btn_side;
+              height: @btn_side;
+              line-height: @btn_side;
+              background-color: white;
+              text-align: center;
+            }
+            .page_btn:hover {
+              background-color: #eee;
+            }
+            .first_btn {
+              border-radius: @btn_radius 0 0 @btn_radius;
+            }
+            .last_btn {
+              border-radius: 0 @btn_radius @btn_radius 0;
             }
           }
         }

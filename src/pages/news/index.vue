@@ -15,6 +15,27 @@
               <a href="#">
                 {{ news.news_title }}
               </a>
+              <span class="time_pattern">
+                {{ news.create_time.split(" ")[0] }}
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="list_divide">
+          <ul>
+            <li>
+              <a href="#" class="page_btn"> < </a>
+            </li>
+            <li v-for="n in pages">
+              <a
+                href="#"
+                class="page_btn"
+              >
+                {{ n + 1 }}
+              </a>
+            </li>
+            <li>
+              <a href="#" class="page_btn"> > </a>
             </li>
           </ul>
         </div>
@@ -32,11 +53,14 @@ import {
 export default {
   data() {
     return {
+      pages: 0,
     };
   },
   computed: {},
   ready() {
-    this.getNewsList();
+    if (!this.newsList.length) {
+      this.getNewsList();
+    }
   },
   attached() {},
   methods: {
@@ -50,8 +74,12 @@ export default {
         if (res.code === 1) {
           this.setNewsList(res.result.list);
           this.setNewsTotal(res.result.count);
+          this.calculatePage(res.result.count);
         }
       }).catch(() => {});
+    },
+    calculatePage(num) {
+      this.pages = Math.ceil(num / 10);
     },
   },
   components: {},
