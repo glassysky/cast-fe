@@ -78,6 +78,9 @@ export default {
     if (!this.newsList.length) {
       this.getNewsList();
     }
+    if (!this.pages) {
+      this.calculatePage(this.newsTotal);
+    }
   },
   attached() {},
   methods: {
