@@ -5,6 +5,7 @@ import SignIn from './pages/signIn/index';
 import SignUp from './pages/signUp/index';
 import Activity from './pages/activity/index';
 import News from './pages/news/index';
+import NewsContent from './pages/news_content/index';
 
 Vue.use(VueRouter);
 
@@ -26,6 +27,9 @@ router.map({
   },
   '/news': {
     component: News,
+  },
+  '/news-content': {
+    component: NewsContent,
   },
   '/sign-in': {
     component: SignIn,
